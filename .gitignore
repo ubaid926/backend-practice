@@ -1,2 +1,2 @@
-db
-.env
+db/index.js
+src/.env
