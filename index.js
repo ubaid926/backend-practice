@@ -2,6 +2,7 @@ import express from "express"
 import { userSchema } from "./joi/index.js"
 import chalk from "chalk"
 import router from "./router/index.js"
+import mongoose from "./db/index.js"
 const app = express()
 
 app.use(express.json())
@@ -9,6 +10,13 @@ app.use(express.json())
 let users = []
 
 app.use("/api" ,router)
+
+mongoose.connection.on("error",(err)=>{
+   console.log("database error",err)
+})
+mongoose.connection.on("open",()=>{
+   console.log("database connected")
+})
 
 // app.use("/",(req,res,next)=>{
 //      console.log(chalk.yellow("middleware"))
