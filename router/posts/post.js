@@ -1,7 +1,9 @@
-
+import {User}  from "../../models/user/index.js"
 
 const post=(req,res)=>{
-   console.log("req", req.body)
+   const user= new User(req.body)
+   user.save()
+   // console.log("req", req.body)
    res.send({
     status:200
    })
