@@ -1,2 +1,19 @@
-db/index.js
-src/.env
+# Ignore environment variables
+.env
+.env.local
+
+# Ignore node_modules (common in Node.js projects)
+node_modules/
+
+# Ignore logs
+logs/
+*.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore build output
+dist/
+build/
+db/
