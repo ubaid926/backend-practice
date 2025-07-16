@@ -16,4 +16,3 @@ Thumbs.db
 # Ignore build output
 dist/
 build/
-db/
