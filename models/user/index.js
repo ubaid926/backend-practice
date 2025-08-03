@@ -11,5 +11,11 @@ const userSchema = new mongoose.Schema({
     , password: {
         type: String
     }
-}, { timestamps: true })
+},
+ { timestamps: //true 
+       {
+    createdAt: "timeOfCreate",
+    updatedAt: "timeOfUpdate"
+} 
+})
 export const User = mongoose.model("User", userSchema)

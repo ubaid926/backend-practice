@@ -64,5 +64,5 @@ mongoose.connection.on("open",()=>{
 // })
 
 app.listen(2000, () => {
-   console.log(chalk.blue("server is running"))
+   console.log(chalk.white("server is running"))
 })
